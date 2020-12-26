@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class BackgroundControler : MonoBehaviour
 {
+ 
     public float scrollSpeed;
     public enum MoveDirection 
     { 
@@ -12,16 +13,28 @@ public class BackgroundControler : MonoBehaviour
         Up = 1
     }
     public Transform background;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        GameManager.instance.player.pressUpEvent += UpBackground;
+        GameManager.instance.player.pressDownEvent += DownBackground;
     }
 
     // Update is called once per frame
     void Update()
     {
+
         ResetPosition();
+    }
+
+    void UpBackground()
+    {
+        SetBackgroundmoving(MoveDirection.Down);
+    }
+    void DownBackground()
+    {
+        SetBackgroundmoving(MoveDirection.Up);
     }
 
     public void SetBackgroundmoving(MoveDirection diretion)

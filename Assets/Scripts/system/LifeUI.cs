@@ -8,8 +8,9 @@ public class LifeUI : MonoBehaviour
 
     // Start is called before the first frame update
     void Start()
-    {    
-        SetLifeimg(2);
+    {
+        GameManager.instance.player.collidedWithEnemyEvent += SetLifeimg;
+        SetLifeimg(3);
     }
 
     // Update is called once per frame

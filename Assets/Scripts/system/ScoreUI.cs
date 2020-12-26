@@ -5,12 +5,13 @@ using UnityEngine.UI;
 
 public class ScoreUI : MonoBehaviour
 {
-
     public Text text;
+    
     // Start is called before the first frame update
 
     void Start()
     {
+        GameManager.instance.player.collidedWithEnemyEvent += SetScoretext;
         SetScoretext(0);
     }
 
