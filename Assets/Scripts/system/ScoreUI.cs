@@ -24,6 +24,5 @@ public class ScoreUI : MonoBehaviour
     public void SetScoretext(int score)
     {
         text.text = score.ToString();
-
     }
 }

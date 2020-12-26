@@ -700,6 +700,7 @@ MonoBehaviour:
   score: 0
   scoreValue: 1
   player: {fileID: 2007755975}
+  scoreUI: {fileID: 1985434048}
 --- !u!1 &1762205428
 GameObject:
   m_ObjectHideFlags: 0

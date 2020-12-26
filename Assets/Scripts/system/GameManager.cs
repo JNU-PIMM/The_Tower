@@ -8,6 +8,7 @@ public class GameManager: MonoBehaviour
     public int score;
     public int scoreValue;
     public CharacterMove player;
+    public ScoreUI scoreUI;
 
     // Start is called before the first frame update
 
@@ -26,6 +27,7 @@ public class GameManager: MonoBehaviour
     void Update()
     {
         score += scoreValue;
+        scoreUI.SetScoretext(score);
     }
 
     void StopScore()
