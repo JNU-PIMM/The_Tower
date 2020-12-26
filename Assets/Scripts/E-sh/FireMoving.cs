@@ -6,6 +6,8 @@ public class FireMoving : MonoBehaviour
 {
     [SerializeField] float speed = 0.1f;
 
+
+
     void Update()
     {
         gameObject.transform.position = new Vector3(0, 1, 0);
