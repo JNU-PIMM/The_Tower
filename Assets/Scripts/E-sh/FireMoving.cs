@@ -8,6 +8,6 @@ public class FireMoving : MonoBehaviour
 
     void Update()
     {
-        gameObject.transform.Translate(Vector3.up * speed * Time.deltaTime);
+        gameObject.transform.position = new Vector3(0, 1, 0);
     }
 }
